@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>3-vscode-basics</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="visual-studio-code-basics">Visual Studio Code Basics</h1>
+<h2 id="section"></h2>
+<ul>
+<li>Open and Save a new file in VSCode.</li>
+<li>Change a file’s syntax highlighting.</li>
+<li>Open a folder in VSCode.</li>
+<li>Create folders and files through the folder tree.</li>
+<li>Open a file temporarily and permanently while you are in a folder tree.</li>
+<li>Rename and Delete files using VSCode.</li>
+<li>Use some common VSCode keyboard shortcuts.</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p><img src="https://user-images.githubusercontent.com/23629340/33947650-3d0b1d56-e025-11e7-9bfb-563695f5f9c4.png" style="display: block; margin: 0 auto; width: 300px; margin-bottom: 50px;"></p>
+<p>As a reminder <strong>VSCode</strong> is: &gt; <a href="https://code.visualstudio.com/">Visual Studio Code</a> is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity)..</p>
+<p>VSCode is great for beginners because of it’s helpful tips and ease of navigation, but equally great for the experienced dev because you can actually modify the source code.</p>
+<p>In this lesson you will learn the basics of using VSCode, the text editor you will be using through the course.</p>
+<p>You will understand how VSCode works with files, how to change the file language and extensions, how to manage with the folder tree and use the most used shortcuts in VSCode.</p>
+<h2 id="files">Files</h2>
+<h3 id="create-a-new-file">Create a new File</h3>
+<p>There are different ways to create a new file in VSCode. You can do it by:</p>
+<ul>
+<li>Choosing <code>File &gt; New file</code> on the menu bar:</li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/33947750-89f16c2e-e025-11e7-9403-e4d77257c2a8.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><strong>MacOS:</strong> Pressing <code>Cmd ⌘</code> + <code>N</code> to create a blank new file on the editor.</li>
+<li><strong>Linux:</strong> Pressing <code>Control</code> + <code>N</code> to create a blank new file on the editor.</li>
+</ul>
+<h3 id="open-a-file">Open a File</h3>
+<p>There are several ways to open a file in VSCode. You can do it by:</p>
+<ul>
+<li>Choosing <code>File &gt; Open...</code> on the menu bar:</li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/33947787-9ebc4d72-e025-11e7-9b87-f8fa5bd46bc8.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><strong>MacOS:</strong> <code>Cmd ⌘</code> + <code>O</code> to choose a file from the standard dialog.</li>
+<li><strong>Linux:</strong> <code>Control</code> + <code>O</code> to choose a file from the standard dialog.</li>
+</ul>
+<h3 id="edit-and-save-a-file">Edit and Save a File</h3>
+<p>Editing a file is pretty straightforward. You can click around and scroll with your mouse and type to change the content. There is no special editing mode or key commands.</p>
+<p>You can save a file in different ways:</p>
+<ul>
+<li>Choosing <code>File &gt; Save</code> from the menu bar:</li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/33947841-be3f45f0-e025-11e7-9a72-25acd95437e0.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li><strong>MacOS:</strong> <code>Cmd ⌘</code> + <code>S</code> to save the file.</li>
+<li><strong>Linux:</strong> <code>Control</code> + <code>S</code> to save the file.</li>
+<li>If you choose <code>File &gt; Save As</code> or press <code>Shift</code>+ <code>Cmd ⌘</code> + <code>S</code> (for MacOS) or <code>Shift</code>+ <code>Control</code> + <code>S</code> (for Linux) then you can save the current content in your editor under a different file name.</li>
+<li>You can choose <code>File &gt; Save All</code> or press <code>Alt</code> + <code>Cmd ⌘</code> + <code>S</code> (for MacOS) to save all the open files in VSCode.</li>
+</ul>
+<h4 id="the-unsaved-icon">The Unsaved icon (•)</h4>
+<p>Sometimes, you will not remember if a file is saved with your latest modifications.</p>
+<p>It is pretty easy to just press the save shortcut in case you are dealing with 1 file, but if you have been editing several files, it can be pretty tedious to save them all.</p>
+<p>Even if you do, there is a chance you don’t remember a file you where modifying 10 minutes ago. VSCode comes with a handy tool to distinguish what has been saved and what hasn’t, the “Unsaved Icon”:</p>
+<hr />
+<table>
+<thead>
+<tr class="header">
+<th><strong>Unsaved</strong></th>
+<th><strong>Saved</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="https://user-images.githubusercontent.com/23629340/33947899-e079ca82-e025-11e7-9396-bb90eb68eb69.png" alt="image" /></td>
+<td><img src="https://user-images.githubusercontent.com/23629340/33947908-e656789c-e025-11e7-8da5-94da986b18a4.png" alt="image" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="working-on-a-project">Working on a project</h2>
+<p>It is not very usual to work just with one file. Usually the projects you will work with will have several files and folders. You could open the full project you are working on with VSCode.</p>
+<h3 id="open-directories">Open directories</h3>
+<p>There are different ways to do that:</p>
+<ul>
+<li>Choose the menu item <code>File &gt; Open</code> (for MacOS) or <code>File &gt; Open Folder</code> (for Linux), and select a directory from the dialog.</li>
+<li>Drag the project folder over the VSCode icon on the Dock.</li>
+<li>You can open a project folder from the iTerm, Terminator or any other terminal emulator. Locate the project path and type <code>code .</code> to open VSCode with the full project. <img src="https://user-images.githubusercontent.com/23629340/33948411-11cc9758-e027-11e7-9527-42ff426682fe.png" alt="image" /></li>
+</ul>
+<p>You can also add several directories to your current VSCode window, by choosing <code>File &gt; Add Project Folder</code> from the menu bar.</p>
+<h2 id="the-folder-tree">The Folder Tree</h2>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d802f2c82fbe91c18f521a25188dc91e.png" /> <em>Ironhack web project folder made in <a href="http://www.sinatrarb.com/">Sinatra</a></em></p>
+<p>The folder tree is a view of the opened folder on VSCode. This <strong>tree view</strong> will allow you access to any file and folder under the root path of your project (or opened folder).</p>
+<p>It is <strong>very important</strong> to get used to working with this view, because most of the time you will be working with projects that will contain a bunch of files since the very beginning.</p>
+<h3 id="open-a-file-in-the-folder-tree">Open a file in the folder tree</h3>
+<p>If you have the folder tree opened you will be working with a lot of files at the same time. Sometimes, you will need to modify them, but other times you will open a file just to check something out. That could cause a mess like this:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/33948466-3c36ea52-e027-11e7-9e92-ebbf9126b510.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Really easy to get lost in there, right? Let’s see how to partially avoid this problem.</p>
+<p><strong>Open file temporarily:</strong> If you click a file in the folder tree <strong>once</strong>, it will open it on VSCode automatically. You can see what its content and scroll as much as you want.</p>
+<p>Then, if you click on any other file, the actual window will change to the last file selected.</p>
+<p><strong>Open file permanently:</strong> If you <strong>double click</strong> on a file or you edit a file, it will open a new tab for that file. Next files will be opend in different tabs.</p>
+<h3 id="search-a-file-on-folder-tree">Search a file on folder tree</h3>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/34097111-256d7fd4-e3d8-11e7-9635-903b239f90d2.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Once you have a project opened in VSCode, you can easily find and open any file within the project.</p>
+<p>If you press <code>Cmd⌘+P</code> (for MacOS) or <code>Control+P</code> (for Linux), the Fuzzy Finder will pop up. It will let you quickly search for any file in any directory inside your project by typing parts of the path.</p>
+<h3 id="basic-operations-on-folder-tree">Basic operations on Folder tree</h3>
+<p>There are many basic operations you can do directly from the folder tree by clicking the right button of the mouse.</p>
+<h4 id="folder-operations">Folder operations</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/34097056-f809dba0-e3d7-11e7-9f0f-6232149f2df6.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h4 id="file-operations">File operations</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/34097088-13377eaa-e3d8-11e7-9588-c6f5ca3b47ad.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h2 id="vscode-shortcuts">VSCode shortcuts</h2>
+<div class="warning">
+<p>:warning: You don’t have to memorize each of these shortcuts. <strong>Please reference this as you continue working</strong>. Make an effort to learn 2-3 new shortcuts a week for the entire course, and you will be an VSCode wizard.</p>
+</div>
+<h3 id="general">General</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Mac OS X</th>
+<th>Windows</th>
+<th>Linux</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Preferences/Settings</td>
+<td><code>cmd-,</code></td>
+<td><code>ctrl-,</code></td>
+<td><code>ctrl-,</code></td>
+<td>Opens the Preferences/Settings view</td>
+</tr>
+<tr class="even">
+<td>Command Palette</td>
+<td><code>shift-cmd-p</code></td>
+<td><code>shift-ctrl-p</code></td>
+<td><code>ctrl-shift-p</code></td>
+<td>Opens &amp; closes the command palette</td>
+</tr>
+<tr class="odd">
+<td>Open File (Fuzzy)</td>
+<td><code>cmd-p</code></td>
+<td><code>ctrl-p</code><br/>or<br/><code>ctrl-t</code></td>
+<td><code>ctrl-p</code></td>
+<td>Opens the Fuzzy Finder palette in which you can search and open files</td>
+</tr>
+<tr class="even">
+<td>Grammar Selector</td>
+<td><code>cmd-k-m</code></td>
+<td><code>ctrl-k-m</code></td>
+<td><code>ctrl-k-m</code></td>
+<td>Selects the language the file is in</td>
+</tr>
+<tr class="odd">
+<td>Toggle Terminal Tools</td>
+<td><code>shift-cmd-m</code></td>
+<td><code>ctrl-shift-m</code></td>
+<td><code>ctrl-shift-m</code></td>
+<td>Opens up the Chrome Developer Tools/Console</td>
+</tr>
+</tbody>
+</table>
+<h3 id="window-management">Window management</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Mac OS X</th>
+<th>Windows</th>
+<th>Linux</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>New File</td>
+<td><code>cmd-n</code></td>
+<td><code>ctrl-n</code></td>
+<td><code>ctrl-n</code></td>
+<td>Opens an empty file in a new tab</td>
+</tr>
+<tr class="even">
+<td>New Window</td>
+<td><code>shift-cmd-n</code></td>
+<td><code>ctrl-shift-n</code></td>
+<td><code>ctrl-shift-n</code></td>
+<td>Opens a new editor window</td>
+</tr>
+<tr class="odd">
+<td>Open</td>
+<td><code>cmd-o</code></td>
+<td><code>ctrl-o</code></td>
+<td><code>ctrl-o</code></td>
+<td>Shows the <em>Open File</em> dialog, which lets you select a file to open in the editor</td>
+</tr>
+<tr class="even">
+<td>Open Folder</td>
+<td><code>cmd-shift-o</code></td>
+<td><code>ctrl-shift-o</code></td>
+<td><code>ctrl-shift-o</code></td>
+<td>Shows the <em>Open Folder</em> dialog, which lets you select a folder to add to the editor’s Tree View</td>
+</tr>
+<tr class="odd">
+<td>Save</td>
+<td><code>cmd-s</code></td>
+<td><code>ctrl-s</code></td>
+<td><code>ctrl-s</code></td>
+<td>Saves the currently active file</td>
+</tr>
+<tr class="even">
+<td>Save As</td>
+<td><code>shift-cmd-s</code></td>
+<td><code>ctrl-shift-s</code></td>
+<td><code>ctrl-shift-s</code></td>
+<td>Saves the currently active file under a different name</td>
+</tr>
+<tr class="odd">
+<td>Save All</td>
+<td><code>alt-cmd-s</code></td>
+<td></td>
+<td></td>
+<td>Saves all changed files</td>
+</tr>
+<tr class="even">
+<td>Close Tab</td>
+<td><code>cmd-w</code></td>
+<td><code>ctrl-w</code></td>
+<td><code>ctrl-w</code></td>
+<td>Closes the currently active tab</td>
+</tr>
+<tr class="odd">
+<td>Close Window</td>
+<td><code>shift-cmd-w</code></td>
+<td><code>ctrl-shift-w</code></td>
+<td><code>ctrl-shift-w</code></td>
+<td>Closes the currently active editor window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editing">Editing</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Mac OS X</th>
+<th>Windows</th>
+<th>Linux</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Duplicate Lines</td>
+<td><code>shift-alt-down</code> / <code>shift-alt-up</code></td>
+<td><code>ctrl-shift-alt-down</code> / <code>ctrl-shift-alt-up</code></td>
+<td><code>ctrl-shift-alt-down</code> / <code>ctrl-shift-alt-up</code></td>
+<td>Duplicates the line of the current cursor position and creates a new line under it with the same contents</td>
+</tr>
+<tr class="even">
+<td>Delete Line</td>
+<td><code>cmd-shift-k</code></td>
+<td><code>ctrl-shift-k</code></td>
+<td><code>ctrl-shift-k</code></td>
+<td>Deletes the current line</td>
+</tr>
+<tr class="odd">
+<td>Move Line Up</td>
+<td><code>alt-up</code></td>
+<td><code>alt-up</code></td>
+<td><code>alt-up</code></td>
+<td>Moves the contents of the current cursor position up one line. If there is a line above with content, the current lines content will swap with the one above it.</td>
+</tr>
+<tr class="even">
+<td>Move Line Down</td>
+<td><code>alt-down</code></td>
+<td><code>alt-down</code></td>
+<td><code>alt-down</code></td>
+<td>Moves the contents of the current cursor position down one line. If there is a line below with content, the line’s content will swap with the one below it.</td>
+</tr>
+<tr class="odd">
+<td>Find/Replace</td>
+<td><code>cmd-f</code></td>
+<td><code>ctrl-f</code></td>
+<td><code>ctrl-f</code></td>
+<td>Opens up the Find/Replace panel</td>
+</tr>
+<tr class="even">
+<td>Find Next</td>
+<td><code>cmd-g</code></td>
+<td><code>F3</code></td>
+<td><code>F3</code></td>
+<td>Toggles forward through the results of the current buffer in the file while the Find/Replace panel is active</td>
+</tr>
+<tr class="odd">
+<td>Find Previous</td>
+<td><code>shift-cmd-g</code></td>
+<td><code>shift-F3</code></td>
+<td><code>shift-F3</code></td>
+<td>Toggles backward through the results of the current buffer in the file while the Find/Replace panel is active</td>
+</tr>
+<tr class="even">
+<td>Find in Project</td>
+<td><code>shift-cmd-f</code></td>
+<td><code>ctrl-shift-f</code></td>
+<td><code>ctrl-shift-f</code></td>
+<td>Opens the Find in Project Panel</td>
+</tr>
+<tr class="odd">
+<td>Go To Line</td>
+<td><code>ctrl-g</code></td>
+<td><code>ctrl-g</code></td>
+<td><code>ctrl-g</code></td>
+<td>Opens the Go To Line panel</td>
+</tr>
+<tr class="even">
+<td>Select Line</td>
+<td><code>cmd-l</code></td>
+<td><code>ctrl-l</code></td>
+<td><code>ctrl-l</code></td>
+<td>Selects the entire line the cursor’s current position is in</td>
+</tr>
+<tr class="odd">
+<td>Toggle Comment</td>
+<td><code>cmd-/</code></td>
+<td><code>ctrl-/</code></td>
+<td><code>ctrl-/</code></td>
+<td>Toggles the selected text into a comment of the current grammar</td>
+</tr>
+<tr class="even">
+<td>Column Selection</td>
+<td><code>ctrl-shift-up/down</code></td>
+<td></td>
+<td><code>shift-alt-up/down</code></td>
+<td>Allows to select multiple rows, where the same edit will be applied</td>
+</tr>
+<tr class="odd">
+<td>Select Same Words</td>
+<td><code>cmd-d</code></td>
+<td><code>ctrl-d</code></td>
+<td><code>ctrl-d</code></td>
+<td>If you select a word, and then hit the key combo for this command, VSCode will select the next same word for you. Then you can either type directly (which will replace the old words) or use left or right arrow to append things.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>In this lesson we have seen that VSCode is a cool source code editor with great packages and it has a completely customizable toolkit. It’s also open source, which means eventually you’ll be able to jump into the code for the editor itself.</p>
+<p>Keep in mind, we chose VSCode because it’s easy to understand, and get up and running. Everyone has an opinion about which text editor is the best, but we all know what they say about opinions :).</p>
+<p>Stick with VSCode during the course, and explore <a href="https://en.wikipedia.org/wiki/List_of_text_editors">all of the other options</a> after the course is over so we can focus on the code.</p>
+</body>
+</html>

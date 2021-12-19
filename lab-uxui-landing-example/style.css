@@ -1,0 +1,172 @@
+@media (max-width: 992px) {
+    .affix {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  padding: 5vh;
+  height: 90vh;
+  background-image: url(img/slider.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding: 2.5vh;
+}
+
+footer {
+  background-color: #ecedef;
+  font-size: 1.5vh;
+  text-align: center;
+  padding: 2vh;
+}
+
+li {
+  padding: 0 10px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #00ccbc;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5vh;
+  font-weight: bold;
+  padding-bottom: 2.5vh;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+h2 {
+  font-size: 2.5vh;
+  font-weight: bold;
+}
+
+p {
+  font-size: 2.3vh;
+}
+
+.main-paragraph {
+  font-size: 9vh;
+  font-weight: bolder;
+  line-height: 9vh;
+  text-align: center;
+  color: #000;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  border-bottom: 4px solid #00ccbc;
+}
+
+.menu-bar {
+  font-size: 2.5vh;
+  line-height: 2.5vh;
+  font-weight: bold;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.options {
+  background-color: #00ccbc;
+  color: white;
+  text-align: center;
+}
+
+.shape {
+  border: 0.5vh solid #fff;
+  background: transparent;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 10vh;
+  display: block;
+  line-height: 10vh;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 5vh;
+}
+
+.option {
+  text-align: center;
+  padding: 2.5vh;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  background-color: #ecedef;
+}
+
+.about-title {
+  padding-bottom: 10px;
+}
+
+.contact {
+  background-color: #00ccbc;
+  color: white;
+  text-align: center;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  border-radius: 2px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 0;
+  margin: 5px auto;
+  font-size: 2vh;
+  font-weight: bold;
+  letter-spacing: .05em;
+  width: 20vh;
+  display: block;
+}
+
+.contact-button:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #00ccbc;
+  cursor: pointer;
+  cursor: hand;
+}

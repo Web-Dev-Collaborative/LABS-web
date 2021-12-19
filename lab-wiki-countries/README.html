@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-react-wikicountries">LAB | React WikiCountries</h1>
+<h2 id="introduction">Introduction</h2>
+<p>After spending too much time on GitHub, you found a <a href="https://raw.githubusercontent.com/mledoze/countries/master/countries.json">JSON database of countries</a> and you decide to use it to create your Wikipedia for countries!</p>
+<p><img src="https://media.giphy.com/media/fdUHHKI36bTVduRDfB/giphy.gif" /></p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<pre class="shell"><code>$ cd lab-wiki-countries
+$ npm install
+$ npm start</code></pre>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up on your work.</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-0-react-router-installation">Iteration 0 | React Router installation</h3>
+<p>Don’t forget to install the React Router:</p>
+<pre class="shell"><code>$ npm install react-router-dom</code></pre>
+<p>And setup the router in your <code>src/index.js</code> file:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// src/index.js</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> React <span class="im">from</span> <span class="st">&#39;react&#39;</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ReactDOM <span class="im">from</span> <span class="st">&#39;react-dom&#39;</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;./index.css&#39;</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> App <span class="im">from</span> <span class="st">&#39;./App&#39;</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> reportWebVitals <span class="im">from</span> <span class="st">&#39;./reportWebVitals&#39;</span><span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { BrowserRouter } <span class="im">from</span> <span class="st">&#39;react-router-dom&#39;</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ReactDOM<span class="op">.</span><span class="fu">render</span>(</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">&lt;BrowserRouter&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">&lt;App</span> <span class="fu">/&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">&lt;/BrowserRouter&gt;</span><span class="op">,</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;root&#39;</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">// comment skipped to stay organized</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="fu">reportWebVitals</span>()<span class="op">;</span></span></code></pre></div>
+<h3 id="bootstrap-installation">Bootstrap installation</h3>
+<p>We will use <a href="https://getbootstrap.com/">Bootstrap V4</a> for the design :+1:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npm install bootstrap</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// src/index.js</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;bootstrap/dist/css/bootstrap.css&#39;</span><span class="op">;</span></span></code></pre></div>
+<h2 id="instructions-1">Instructions</h2>
+<h3 id="iteration-1.1-create-components">Iteration 1.1 | Create components</h3>
+<p>In this iteration, we will focus on the general layout. Before you start, inside the <code>src</code> folder, create the <code>components</code> folder. There you will create at least 3 components:</p>
+<ul>
+<li><p><code>Navbar</code>: Displaying the basic navbar with the LAB name</p></li>
+<li><p><code>CountriesList</code>: Displays the list of links with the country names. Each link should be a <code>react-router-dom</code> <code>Link</code> which we will use to <u>send</u> the country code (<code>cca3</code>) via the URL.</p></li>
+<li><p><code>CountryDetails</code>: Is the component that we will render via the <code>react-router-dom</code>’s <code>Route</code> and will be <u>receiving</u> the country code (<code>cca3</code>) via the URL.</p>
+<p>This is actually the id of the country (example: <code>/ESP</code> for Spain, <code>/FRA</code> for France).</p></li>
+</ul>
+<p>To help you with the structure of the components, we gave you an example of a page inside <code>example.html</code>.</p>
+<p>If you want to style it, refresh your memory on Bootstrap in the <a href="https://getbootstrap.com/docs/4.0">docs</a> or check out how we approached styling in the <code>example.html</code>.</p>
+<h3 id="iteration-1.2-navbar-component">Iteration 1.2 | Navbar component</h3>
+<p>The simplest way to define a component in React is to write a JavaScript function aka function component. The navbar should be displaying the title of the LAB - WikiCountries.</p>
+<h3 id="iteration-1.3-countrieslist-component">Iteration 1.3 | CountriesList component</h3>
+<p>This component should render a list of links that are used to trigger the browser URL change via the <code>react-router-dom</code> <code>Link</code>. Click on a <code>Link</code> component will then activate the corresponding <code>Route</code> showing the country details component.</p>
+<h3 id="iteration-1.4-countrydetails-component-and-route-setup">Iteration 1.4 | CountryDetails component and <code>Route</code> setup</h3>
+<p>Now when our list of countries is ready, we should create the <code>CountryDetails</code> component that will be displaying the details of a particular country of a link that we clicked. This component should be dynamically displayed/rendered by the <code>react-router-dom</code> <code>Route</code>.</p>
+<p>In this case, you should use only 1 <code>&lt;Route /&gt;</code> for <code>CountryDetails</code> component.</p>
+<p>Components rendered by the <code>Route</code> receive special <code>props</code> (<code>match</code>, <code>location</code> and <code>history</code>) passed by the <code>react-router-dom</code>. We can use this props to obtain the information coming from the browser’s URL bar, for example, the <code>cca3</code> code of the country. For a reminder on how to create a dynamic <code>Route</code> that displays a component feel free to check <a href="https://reactrouter.com/web/api/Route/route-props">this example</a>.</p>
+<p><strong>NOTE:</strong> For Windows users, there is no emoji for the <code>flag</code>. Instead, you can rely on these links:</p>
+<ul>
+<li>France: https://www.countryflags.io/fr/flat/64.png</li>
+<li>Germany: https://www.countryflags.io/de/flat/64.png</li>
+<li>etc.</li>
+</ul>
+<h3 id="iteration-2-linking-it-all-together">Iteration 2 | Linking it all together</h3>
+<p>Once done creating the components the structure of elements that your <code>App.js</code> will render should look somewhat like this:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="ot">className</span><span class="op">=</span><span class="st">&quot;App&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">&lt;Navbar</span> <span class="fu">/&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="ot">className</span><span class="op">=</span><span class="st">&quot;container&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="ot">className</span><span class="op">=</span><span class="st">&quot;row&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">&lt;CountriesList</span> <span class="ot">countries</span><span class="op">=</span><span class="va">{</span>countries<span class="va">}</span> <span class="fu">/&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      <span class="va">{</span><span class="co">/* React Router Route rendering the CountryDetails should go here */</span><span class="va">}</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<h3 id="iteration-3-set-the-state-when-the-component-mounts">Iteration 3 | Set the state when the component mounts</h3>
+<p>Our <code>App.js</code> application should have its own state holding one property <code>countries</code> holding the data coming from the <code>countries.json</code> file.</p>
+<p>The state should be set only once the component is rendered to the DOM, using the lifecycle method <code>componentDidMount()</code> .</p>
+<h3 id="bonus-fetch-the-data-from-an-api">Bonus | Fetch the data from an API</h3>
+<p>Instead of relying on the static data coming from a <code>json</code> file, let’s do something more interesting and get out the data from an actual API.</p>
+<p>Let’s make a <code>GET</code> request to the URL <a href="https://restcountries.eu/#api-endpoints-all">https://restcountries.eu/#api-endpoints-all</a> and use the data returned from the response as the list of the countries. You can use either <code>fetch</code> or <code>axios</code> to make the request. You may want to check the lifecycle method <a href="https://reactjs.org/docs/react-component.html#componentdidmount"><code>componentDidMount</code></a>.</p>
+<p>The request should happen first thing when the application loads, therefore think about when and from where we should make the request to the API.</p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

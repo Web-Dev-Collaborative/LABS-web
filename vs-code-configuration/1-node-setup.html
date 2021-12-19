@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>1-node-setup</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="node.js-intro-installation">Node.js Intro &amp; Installation</h1>
+<p>Node.jsIntro</p>
+<ul>
+<li>Understand the high-level view of what a <em>runtime</em> is</li>
+<li>Explain what Node.js is, a bit of its history, and why you would use it</li>
+<li>Use npm, Node’s package manager</li>
+<li>Install npm packages</li>
+</ul>
+<h2 id="what-is-node.js">What is Node.js?</h2>
+<p>Node.js (sometimes called just <em>Node</em> for short) is a JavaScript <strong>runtime</strong> developed by Ryan Dahl, at the time of Joyent. In short, Dahl created Node because of the <a href="https://www.infoq.com/interviews/node-ryan-dahl">synchronous limitations of current web frameworks</a>. Node has allowed us to run JavaScript anywhere, including web servers and robots.</p>
+<p>In the past, the only runtime environment for JavaScript was the browser. Chrome, Safari, and Internet Explorer had their own JavaScript runtimes, but we <em>could not</em> run JavaScript on our computers.</p>
+<p>Dahl changed this by extracting the open source <code>V8 runtime environment</code> from Chrome, and creating an implementation for servers.</p>
+<h2 id="installing-node">Installing Node</h2>
+<p>Installing Node is relatively easy. We can use <code>brew</code> or <code>apt-get</code> to install Node on Mac or Linux, but we’re also going to want to keep Node up to date.</p>
+<p>In addition, some projects may use a different version of Node than your own. This can become a hassle to deal with, so what we would suggest doing is installing <a href="https://github.com/creationix/nvm">Node Version Manager(nvm)</a>.</p>
+<p>NVM allows you to pick which version of Node to use, install new versions, and more.</p>
+<h3 id="installing-nvm">Installing NVM</h3>
+<p>First, we have to install some prerequisites.</p>
+<h4 id="mac">Mac</h4>
+<p>In the terminal:</p>
+<pre><code>$ xcode-select --install
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+$ nvm install --lts
+$ nvm use --lts</code></pre>
+<h4 id="ubuntu">Ubuntu</h4>
+<p>In the terminal:</p>
+<pre><code>$ apt-get update
+$ apt-get install build-essential libssl-dev
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+$ nvm install --lts
+$ nvm use --lts</code></pre>
+<p>And to test to make sure the installation is complete:</p>
+<pre><code>$ node --version
+8.9.3</code></pre>
+<p>Once node is installed, you will have to install some additional packages that we will use in the bootcamp:</p>
+<pre><code>$ npm install --global eslint eslint-config-airbnb-base@latest htmlhint</code></pre>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="https://www.npmjs.com/">NPM Packages</a></li>
+</ul>
+</body>
+</html>
